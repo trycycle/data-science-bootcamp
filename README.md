@@ -4,25 +4,21 @@
 ## 環境設定
 本ブートキャンプでは、Python 3.xを使って課題に取り組みます。まずは、下記要領に従ってPythonが実行できる環境を構築してください。
 
-### 1. Adacondaのインストール
+### 1. AdacondaとPythonのインストール
 Adacondaとは、Python本体に加え、データ分析ライブラリなどPythonでよく利用されるライブラリを一括でインストール可能にしたパッケージです。
 
-下記を参考にAnacondaをインストールしてください。
+下記を参考にAnacondaとPython3をインストールしてください。
 * Windowsユーザ: http://b.hontolab.org/2lDVuv0
 * Macユーザ: http://b.hontolab.org/2z5iWoo
 
-### 2. Pythonインストール
-
-
-
-### 3. gitのインストール
+### 2. gitのインストール
 Gitとは、コードやデータを管理しながら開発を行うためのシステムの1つです（分散型バージョン管理システム）。
 
 下記を参考にGitをインストールしてください。
 * Windowsユーザ: http://b.hontolab.org/2imaTeD
 * Macユーザ: http://b.hontolab.org/2zXfQlq
 
-### 4. 本ブートキャンプコンテンツのダウンロード
+### 3. 本ブートキャンプコンテンツのダウンロード
 適当なフォルダに移動し、本リポジトリをクローンしてください。
 
 ```
