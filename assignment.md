@@ -22,7 +22,7 @@
 ある文字列sが与えられたとき、list(s)はsを1文字ずつ分解したリストを返す。
 
 ### Q7. CSVファイルの読み込み
-[ここ](https://raw.githubusercontent.com/trycycle/data-science-bootcamp/master/data/population-abstract2010-2015.csv?token=ACEX5YIr6NRqeSmCCu6aOTWzwErbgnN9ks5aKjuuwA%3D%3D)からCSVファイルを手動でダウンロードし、適当な場所に保存せよ。
+[こちら](https://raw.githubusercontent.com/trycycle/data-science-bootcamp/master/data/population-abstract2010-2015.csv?token=ACEX5YIr6NRqeSmCCu6aOTWzwErbgnN9ks5aKjuuwA%3D%3D)からCSVファイルを手動でダウンロードし、適当な場所に保存せよ。
 保存したファイルをPythonから読み込み、その内容を一行ずつ表示せよ（本リポジトリをcloneされた方は、dataフォルダに同じデータを配置しています）。
 
 （留意事項）
