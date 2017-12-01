@@ -22,11 +22,12 @@
 ある文字列sが与えられたとき、list(s)はsを1文字ずつ分解したリストを返す。
 
 ### Q7. CSVファイルの読み込み
-XXXからCSVファイルを手動でダウンロードし、適当な場所に保存せよ。
-保存したファイルをPythonから読み込み、その内容を一行ずつ表示せよ。
+[ここ](https://raw.githubusercontent.com/trycycle/data-science-bootcamp/master/data/population-abstract2010-2015.csv?token=ACEX5YIr6NRqeSmCCu6aOTWzwErbgnN9ks5aKjuuwA%3D%3D)からCSVファイルを手動でダウンロードし、適当な場所に保存せよ。
+保存したファイルをPythonから読み込み、その内容を一行ずつ表示せよ（本リポジトリをcloneされた方は、dataフォルダに同じデータを配置しています）。
 
 （留意事項）
 当該CSVファイルは「[平成27年度国勢調査の総人口・世帯数](http://www.e-stat.go.jp/SG1/estat/GL08020103.do?_csvDownload_&fileId=000008040403&releaseCount=3)データ」の一部を抽出・加工したものです。
+
 
 ### Q8. CSVファイルからのデータの切り出し
 Q7でダウンロードしたCSVファイルは、下記項目からなる人口統計データである。CSVデータから、都道府県名をキー、2015年調査時と2010年調査時の人口増減数を値とする辞書オブジェクトpopulationを作成せよ。
