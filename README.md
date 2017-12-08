@@ -28,7 +28,7 @@ Gitとは、コードやデータを管理しながら開発を行うための�
 適当なフォルダに移動し、本リポジトリをクローンしてください。
 
 ```
- $ git clone git@github.com:trycycle/data-science-bootcamp.git
+ $ git clone https://github.com/trycycle/data-science-bootcamp.git
 ```
 
 ### 4. コードの開発・実行環境の起動

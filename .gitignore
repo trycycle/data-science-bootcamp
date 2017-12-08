@@ -103,4 +103,4 @@ ENV/
 # misc
 .DS_Store
 /local
-/answer
+/data/output
