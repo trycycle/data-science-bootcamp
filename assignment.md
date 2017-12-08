@@ -120,11 +120,11 @@ data/file_handling_assignmentディレクトリにあるhamamtsu.txt（浜松市
 |最低|Jan|2.5|
 |...|...|...|
 
-| Tables        | Are           | Cool  |
-| ------------- |:-------------:| -----:|
-| col 3 is      | right-aligned | $1600 |
-| col 2 is      | centered      |   $12 |
-| zebra stripes | are neat      |    $1 |
+| type        | month           | temperature  |
+| ------------- |-------------| -----|
+| 最高      | Jan | $1600 |
+|最低|Jan|2.5|
+
 
 ---
 ### Q20. 対訳 by 文字列置換
