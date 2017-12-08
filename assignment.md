@@ -127,5 +127,3 @@ data/file_handling_assignmentディレクトリにあるdictionary.csvには、�
 
 > Herzlichen Glückwunsch zum Erreichen der zwanzig Aufgaben! Nächsten Aufgaben sind praktischer für Ihre Forschungsaktivitäten. Habe Spaß!
 
----
-### Q.21
