@@ -113,13 +113,6 @@ data/file_handling_assignmentディレクトリにあるhamamtsu.txt（浜松市
 
 各月の平均最高気温、最低気温を正規表現を用いて抽出し、hamamatsu_temperature.tsvという名前のTSVファイルに保存せよ。なお、TSVファイルのフォーマットは以下の様式に従うこと。
 
-|type|month|temperature|
-|:---|:---|
-|最高|Jan|10.1|
-|...|...|...|
-|最低|Jan|2.5|
-|...|...|...|
-
 | type        | month           | temperature  |
 | ------------- |-------------| -----|
 | 最高      | Jan | $1600 |
