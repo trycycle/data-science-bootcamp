@@ -120,6 +120,12 @@ data/file_handling_assignmentディレクトリにあるhamamtsu.txt（浜松市
 |最低|Jan|2.5|
 |...|...|...|
 
+| Tables        | Are           | Cool  |
+| ------------- |:-------------:| -----:|
+| col 3 is      | right-aligned | $1600 |
+| col 2 is      | centered      |   $12 |
+| zebra stripes | are neat      |    $1 |
+
 ---
 ### Q20. 対訳 by 文字列置換
 data/file_handling_assignmentディレクトリにあるdictionary.csvには、ある言語の語彙（other_languageカラム）と英語の語彙（englishカラム）の対応関係が1行ごとに記されている。dictonary.tsvを用いて、以下の文章を英語に変換せよ。なお、dictionary.tsvの1行目はヘッダーであり、2行目以降に単語の対応関係が記されていることに注意せよ。なお、変換後の文字列はすべて小文字で構成されていても問題ない。
