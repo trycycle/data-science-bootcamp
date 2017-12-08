@@ -123,7 +123,9 @@ data/file_handling_assignmentディレクトリにあるhamamtsu.txt（浜松市
 | type        | month           | temperature  |
 | ------------- |-------------| -----|
 | 最高      | Jan | $1600 |
+|...|...|...|
 |最低|Jan|2.5|
+|...|...|...|
 
 
 ---
