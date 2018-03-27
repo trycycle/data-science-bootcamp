@@ -183,3 +183,24 @@ data/file_handling_assignmentディレクトリにあるhamamtsu.txt（浜松市
 data/file_handling_assignmentディレクトリにあるdictionary.csvには、ある言語の語彙（other_languageカラム）と英語の語彙（englishカラム）の対応関係が1行ごとに記されている。dictonary.tsvを用いて、以下の文章を英語に変換せよ。なお、dictionary.tsvの1行目はヘッダーであり、2行目以降に単語の対応関係が記されていることに注意せよ。なお、変換後の文字列はすべて小文字で構成されていても問題ない。
 
 > Herzlichen Glückwunsch zum Erreichen der zwanzig Aufgaben! Nächsten Aufgaben sind praktischer für Ihre Forschungsaktivitäten. Habe Spaß!
+
+---
+### 第4章: ウェブプログラミング
+
+## Q31. wget
+requestsライブラリを利用し、[Yahoo!ファイナンス業種別銘柄一覧：サービス業](https://stocks.finance.yahoo.co.jp/stocks/qi/?ids=9050)のトップページのhtmlを取得し表示せよ。
+
+## Q33. スクレピング
+上記課題で取得したHTMLを解析して、サービス業を営む上場企業の銘柄コードとそれに対応する株価のリスト（20件）を取得せよ。
+（ヒント）外部モジュールを使用してもよい（例: pyquery）。もちろん使わなくてもよい。
+
+## Q33. pagination対応スクレピング
+[Yahoo!ファイナンス業種別銘柄一覧：サービス業](https://stocks.finance.yahoo.co.jp/stocks/qi/?ids=9050)のサイトには、サービス業を営む400以上の企業（以下サービス系企業）の株価情報が掲載されている。上記サイトで閲覧可能なすべてのサービス系企業の株価を取得せよ。
+ヒント: まず始めに「次の20件」を表示するためのURLをどう得るかを考えてみるとよい。
+
+## Q34. 図書・雑誌検索API（1/2）
+[CiNii Books API](https://support.nii.ac.jp/ja/cib/api/b_opensearch)を利用し、「静岡」というキーワードに関する図書・雑誌リストを10件取得し、そのタイトルを出力せよ。
+（ヒント） 最低限使用するクエリパラメータは「フリーワードq」と「出力フォーマットformat」の2つ。
+
+## Q35. 図書・雑誌検索API（2/2）
+[CiNii Books API](https://support.nii.ac.jp/ja/cib/api/b_opensearch)をAPIを利用し、静岡県の図書館に蔵書されている図書・雑誌のリストを10000件取得し、出版年ごとに図書・雑誌のタイトル数を出力せよ。
