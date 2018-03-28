@@ -150,7 +150,8 @@ data/file_handling_assignmentディレクトリにあるbig-cities-pageviews.xml
 
 big-cities-pageviews.xmlを読み込み、pageノードのid属性が1642589のWikipedia記事のタイトル（都市名）を表示せよ。
 
-（ヒント）pyqueryモジュールを利用する。
+* ヒント1：XML解析にはしばしばxpathが使われる。
+* ヒント2：pythonでxpathが使えるライブラリとして[pyqueryライブラリ](http://python.zombie-hunting-club.com/entry/2017/11/07/225538)がある。
 
 
 ### Q26. XMLファイルのパース2
@@ -188,30 +189,30 @@ data/file_handling_assignmentディレクトリにあるdictionary.csvには、�
 ### 第4章: ウェブプログラミング
 
 ### Q31. wget
-requestsライブラリを利用し、[Yahoo!ファイナンス業種別銘柄一覧：サービス業](https://stocks.finance.yahoo.co.jp/stocks/qi/?ids=9050)のトップページのhtmlを取得し表示せよ。
+[requestsライブラリ](https://qiita.com/sqrtxx/items/49beaa3795925e7de666)を利用し、[Yahoo!ファイナンス業種別銘柄一覧：サービス業](https://stocks.finance.yahoo.co.jp/stocks/qi/?ids=9050)のトップページのhtmlを取得し表示せよ。
 
 
 ### Q32. スクレピング（1/4）
-課題Q31で取得したHTMLを解析して、サービス業を営む上場企業の銘柄コード、およびそれに対応する（ページアクセス時点での）株価のリストを20件を取得せよ。（ヒント）外部ライブラリを使用してもよい（例: pyquery）。
+課題Q31で取得したHTMLを解析して、サービス業を営む上場企業の銘柄コード、およびそれに対応する（ページアクセス時点での）株価のリストを20件を取得せよ。
+
+（ヒント）外部ライブラリを使用してもよい（例：[pyquery](http://python.zombie-hunting-club.com/entry/2017/11/07/225538)）。
 
 
 ### Q33. スクレピング（2/4）
-[Yahoo!ファイナンス業種別銘柄一覧：サービス業](https://stocks.finance.yahoo.co.jp/stocks/qi/?ids=9050)のサイトでは、1ページあたり最大20件の銘柄とその株価が表示される設計になっている。また「次の20件」をクリックすることで更に別の20件の銘柄を確認することができる。当該サイトの[トップページ](https://stocks.finance.yahoo.co.jp/stocks/qi/?ids=9050)のHTMLを解析し、当該ページに表示された「次の20件」リンクのURLを取得せよ。
+[Yahoo!ファイナンス業種別銘柄一覧：サービス業](https://stocks.finance.yahoo.co.jp/stocks/qi/?ids=9050)のサイトでは、1ページあたり最大20件の銘柄とその株価が表示される設計になっている。また「次の20件」をクリックすることで更に別の20件の銘柄を確認することができる。当該サイトの[トップページ](https://stocks.finance.yahoo.co.jp/stocks/qi/?ids=9050)のHTMLを解析し、ページ内に表示された「次の20件」リンクのURLを取得せよ。
 
 
 ### Q34. スクレピング（3/4）
-[Yahoo!ファイナンス業種別銘柄一覧：サービス業](https://stocks.finance.yahoo.co.jp/stocks/qi/?ids=9050)のサイトには、サービス業を営む400以上の企業（以下サービス系企業）の株価情報が掲載されている。上記サイトで閲覧可能なすべてのサービス系企業の株価を取得せよ。ただし、出力は下記のように、（ページアクセス時点での）株価が高い順に、銘柄コード名、株価のペアを表示するものとする。
+[Yahoo!ファイナンス業種別銘柄一覧：サービス業](https://stocks.finance.yahoo.co.jp/stocks/qi/?ids=9050)のサイトには、サービス業を営む400以上の企業（以下サービス系企業）の株価情報が掲載されている。上記サイトで閲覧可能なすべてのサービス系企業の（ページアクセス時点での）株価を取得せよ。ただし、出力は下記のように、株価が高い順に、銘柄コード名、株価のペアを表示するものとする。
 
 > (6030, 16730.0)
-
 > (4661, 10515.0)
-
 > (9643, 10150.0)
 > ...
 
 
 ### Q35. スクレピング（4/4）
-任意の銘柄コードstock_codeが与えられたとき、Yahoo!ファイナンスのウェブサイトをリアルタイムに解析することで、銘柄コードstock_codeに対応する企業名、現在の株価、および前日終値を返す関数get_stock_info(stock_code)を実装せよ。なお、出力は{'company': 企業名, "current_stock_price":現在の株価, "last_close":前日終値}という辞書形式で返すこと。また、出力は存在しない銘柄コードが入力された場合はNoneオブジェクトを出力せよ。
+任意の銘柄コードstock_codeが与えられたとき、Yahoo!ファイナンスのウェブサイトをリアルタイムに解析することで、銘柄コードstock_codeに対応する企業名、現在の株価、および前日終値を返す関数get_stock_infoを実装せよ。なお、入力引数はstock_codeとする。また、出力は{'company': 企業名, "current_stock_price":現在の株価, "last_close":前日終値}という辞書形式で返すこと。また、出力は存在しない銘柄コードが入力された場合はNoneオブジェクトを出力せよ。
 
 （ヒント）株価詳細ページのURL（例は[コチラ](https://stocks.finance.yahoo.co.jp/stocks/detail/?code=4689)）を観察して、どのようなページを解析対象とするかを決めること。
 
@@ -219,11 +220,12 @@ requestsライブラリを利用し、[Yahoo!ファイナンス業種別銘柄�
 ### Q36. 図書・雑誌検索API（1/5）
 [CiNii Books API](https://support.nii.ac.jp/ja/cib/api/b_opensearch)を利用し、「お好み焼き」というキーワードに関する図書・雑誌リストを10件取得し、そのタイトルを出力せよ。
 
-（ヒント） 最低限使用するクエリパラメータは「フリーワードq」と「出力フォーマットformat」の2つ。
+* ヒント1：[CiNii Books API](https://support.nii.ac.jp/ja/cib/api/b_opensearch)に書かれているように、http:\/\/ci.nii.ac.jp/books/opensearch/search?(パラメータ=値)& (パラメータ=値)&…&(パラメータ=値)にHTTPアクセスすることで、検索結果を取得することができる。
+* ヒント2：最低限使用するクエリパラメータは「フリーワードq」と「出力フォーマットformat」の2つ。
 
 
 ### Q37. 図書・雑誌検索API（2/5）
-[CiNii Books API](https://support.nii.ac.jp/ja/cib/api/b_opensearch)を利用し、静岡県の図書館に蔵書されている図書・雑誌のリストを10000件取得し、出版年ごとに図書・雑誌のタイトル数を出力せよ。出力は出版年が若い順に出版年、タイトル数のペアを表示するものとする。また、「19--」のように出版年が一部欠損しているものは出力結果から除外するものとする。
+[CiNii Books API](https://support.nii.ac.jp/ja/cib/api/b_opensearch)を利用し、静岡県の図書館に蔵書されている図書・雑誌のリストを10000件取得し、出版年ごとに図書・雑誌のタイトル数を出力せよ。なお、出力は出版年が若い順に出版年、タイトル数のペアを表示するものとする。また、「19--」のように出版年が一部欠損しているものは出力結果から除外するものとする。
 
 ### Q38. 図書・雑誌検索API（3/5）
 Q36の課題で実装したコードを改良し、[CiNii Books API](https://support.nii.ac.jp/ja/cib/api/b_opensearch)を利用し、任意のキーワードqueryが与えられたときに、それに関する図書・雑誌リストを10件取得し、そのタイトル、著者名、および書誌詳細ページのURL（例は[コチラ](http://ci.nii.ac.jp/ncid/BB0521742X)）を返す関数simple_search_booksを実装せよ。なお、出力は{"title":タイトル, "author":著者名, "detail_url":書誌詳細ページのURL}という辞書のリストで行うものとする。また、キーワードにマッチする図書・雑誌がなかった場合はNoneオブジェクトを返すように実装せよ。
