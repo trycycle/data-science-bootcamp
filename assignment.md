@@ -221,7 +221,9 @@ data/file_handling_assignmentディレクトリにあるdictionary.csvには、�
 ### Q36. 図書・雑誌検索API（1/5）
 [CiNii Books API](https://support.nii.ac.jp/ja/cib/api/b_opensearch)を利用し、「お好み焼き」というキーワードに関する図書・雑誌リストを10件取得し、そのタイトルを出力せよ。
 
-* ヒント1：[CiNii Books API](https://support.nii.ac.jp/ja/cib/api/b_opensearch)に書かれているように、http:\/\/ci.nii.ac.jp/books/opensearch/search?(パラメータ=値)\&(パラメータ=値)\&…\&(パラメータ=値)にHTTPアクセスすることで、検索結果を取得することができる。
+* ヒント1：[CiNii Books API](https://support.nii.ac.jp/ja/cib/api/b_opensearch)に書かれているように、
+http:\/\/ci.nii.ac.jp/books/opensearch/search?(パラメータ=値)\&(パラメータ=値)\&…\&(パラメータ=値)
+にHTTPアクセスすることで、検索結果を取得することができる。
 * ヒント2：最低限使用するクエリパラメータは「フリーワードq」と「出力フォーマットformat」の2つ。
 
 
