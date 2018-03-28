@@ -234,7 +234,7 @@ http:\/\/ci.nii.ac.jp/books/opensearch/search?(パラメータ=値)\&(パラメ�
 Q36の課題で実装したコードを改良し、[CiNii Books API](https://support.nii.ac.jp/ja/cib/api/b_opensearch)を利用し、任意のキーワードqueryが与えられたときに、それに関する図書・雑誌リストを10件取得し、そのタイトル、著者名、および書誌詳細ページのURL（例は[コチラ](http://ci.nii.ac.jp/ncid/BB0521742X)）を返す関数simple_search_booksを実装せよ。なお、出力は{"title":タイトル, "author":著者名, "detail_url":書誌詳細ページのURL}という辞書のリストで行うものとする。また、キーワードにマッチする図書・雑誌がなかった場合はNoneオブジェクトを返すように実装せよ。
 
 
-### Q39. 図書・雑誌検索API（4/5）
+### Q39. 図書・雑誌検索API（4/5）& スクレイピング
 CiNii Booksのウェブサイト上の任意の書誌詳細ページのURL（例は[コチラ](http://ci.nii.ac.jp/ncid/BB0521742X)）が与えられたとき、そのページのHTMLを解析することで、該当書誌の概要文（CiNii Booksでは「内容説明」に該当）を取得する関数get_abstractを実装せよ。get_abstractの入力引数はurlとして実装せよ。
 
 例えば、get_abstact("http://ci.nii.ac.jp/ncid/BB0521742X") は以下を返す：
