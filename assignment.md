@@ -327,7 +327,7 @@ plt.show()
 
 
 ### Q49. 共起語の取得
-ある文の中に単語$t_A$と単語$t_B$が登場するとき、「$t_A$と$t_B$は共起する」と呼ぶことにする。また、文書中に単語$t_A$と単語$t_B$が登場する文がN個存在するとき、「$t_A$と$t_B$の共起回数はN」と定義する。
+ある文の中に単語<img src="https://latex.codecogs.com/png.latex?\inline&space;t_A" />と単語<img src="https://latex.codecogs.com/png.latex?\inline&space;t_B" />が登場するとき、「<img src="https://latex.codecogs.com/png.latex?\inline&space;t_A" />と<img src="https://latex.codecogs.com/png.latex?\inline&space;t_B" />は共起する」と呼ぶことにする。また、文書中に単語<img src="https://latex.codecogs.com/png.latex?\inline&space;t_A" />と単語<img src="https://latex.codecogs.com/png.latex?\inline&space;t_B" />が登場する文がN個存在するとき、「<img src="https://latex.codecogs.com/png.latex?\inline&space;t_A" />と<img src="https://latex.codecogs.com/png.latex?\inline&space;t_B" />の共起回数はN」と定義する。
 
 [「茶の本」の文書](https://raw.githubusercontent.com/trycycle/data-science-bootcamp/master/data/natural-language-processing/cha_no_merosu.txt)の文章の中で単語「茶」と共起する名詞を抽出し、共起回数順（降順）に表示せよ。
 
