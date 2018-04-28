@@ -247,7 +247,7 @@ Q38,39で実装した関数simple_search_booksおよびget_abstractを改良し�
 ---
 ## 第5章: 軽量な自然言語処理
 
-本章では、岡倉天心の「茶の本」を題材に形態素解析器を用いた「軽量な自然言語解析」の演習を行う。下記リンクから「茶の本」のテキストファイルをダウンロードして、以下の課題に解答せよ。
+本章では、岡倉天心の「茶の本」（青空文庫）を題材に形態素解析器を用いた「軽量な自然言語解析」の演習を行う。下記リンクから「茶の本」のテキストファイルをダウンロードして、以下の課題に解答せよ。
 
 [「茶の本」のテキストファイルをダウンロード](https://raw.githubusercontent.com/trycycle/data-science-bootcamp/master/data/natural-language-processing/cha_no_hon.txt)
 
