@@ -261,7 +261,7 @@ Q38,39で実装した関数simple_search_booksおよびget_abstractを改良し�
 
 
 ### Q42. サ変接続名詞の抽出
-[「茶の本」の文書](https://raw.githubusercontent.com/trycycle/data-science-bootcamp/master/data/natural-language-processing/cha_no_merosu.txt)からすべてのサ変接続の名詞を抽出し、その出現頻度とともに表示せよ（[言語処理100本ノック 2015 Q.33 改題](http://www.cl.ecei.tohoku.ac.jp/nlp100/)より）。
+[「茶の本」の文書](https://raw.githubusercontent.com/trycycle/data-science-bootcamp/master/data/natural-language-processing/cha_no_merosu.txt)からすべてのサ変接続の名詞を抽出し、その出現頻度とともに表示せよ（[言語処理100本ノック 2015 Q.33 ](http://www.cl.ecei.tohoku.ac.jp/nlp100/)より改題）。
 
 
 ### Q43. 「形容詞+名詞」の句の抽出
@@ -273,7 +273,7 @@ Q38,39で実装した関数simple_search_booksおよびget_abstractを改良し�
 
 
 ### Q45. 単語出現頻度のヒストグラム
-[「茶の本」の文書](https://raw.githubusercontent.com/trycycle/data-science-bootcamp/master/data/natural-language-processing/cha_no_merosu.txt)のすべての名詞を抽出し、単語の出現頻度のヒストグラムを表示せよ（[言語処理100本ノック 2015 Q.38 改題](http://www.cl.ecei.tohoku.ac.jp/nlp100/)より）。
+[「茶の本」の文書](https://raw.githubusercontent.com/trycycle/data-science-bootcamp/master/data/natural-language-processing/cha_no_merosu.txt)のすべての名詞を抽出し、単語の出現頻度のヒストグラムを表示せよ（[言語処理100本ノック 2015 Q.38 ](http://www.cl.ecei.tohoku.ac.jp/nlp100/)より改題）。
 
 なお、ヒストグラムの表示にはmatplotlibライブラリを用いるとよい。以下にサンプルコードを記す：
 
@@ -291,7 +291,7 @@ plt.show()
 ```
 
 ### Q46. ジップ（Zipf）の法則
-[「茶の本」の文書](https://raw.githubusercontent.com/trycycle/data-science-bootcamp/master/data/natural-language-processing/cha_no_merosu.txt)の全単語を抽出し、単語の出現頻度順位を横軸、その出現頻度を縦軸する両対数グラフを表示せよ（[言語処理100本ノック 2015 Q.39 改題](http://www.cl.ecei.tohoku.ac.jp/nlp100/)より）。
+[「茶の本」の文書](https://raw.githubusercontent.com/trycycle/data-science-bootcamp/master/data/natural-language-processing/cha_no_merosu.txt)の全単語を抽出し、単語の出現頻度順位を横軸、その出現頻度を縦軸する両対数グラフを表示せよ（[言語処理100本ノック 2015 Q.39](http://www.cl.ecei.tohoku.ac.jp/nlp100/)より改題）。
 
 なお、散布図の表示にはmatplotlibライブラリを用いるとよい。以下にサンプルコードを記す：
 
@@ -334,8 +334,8 @@ plt.show()
 
 
 ### Q50. 共起度の計算
-文書には文が$N$個あるとする。単語$t_A$のsentence_frequencyを$C(t_A)$、単語Bのsentence_frequencyを$C(t_B)$、単語$t_A$と単語$t_B$が同一文に出現する回数（共起回数）を$C(t_A,t_B)$としたとき、単語$t_A$と単語$t_B$の共起度を下記の式で定義する：
+文書には文が<img src="https://latex.codecogs.com/gif.latex?\inline&space;N" />個あるとする。単語<img src="https://latex.codecogs.com/gif.latex?\inline&space;t_A" />のsentence_frequencyを<img src="https://latex.codecogs.com/gif.latex?\inline&space;C(t_A)" />、単語Bのsentence_frequencyを<img src="https://latex.codecogs.com/gif.latex?\inline&space;C(t_B)" />、単語<img src="https://latex.codecogs.com/gif.latex?\inline&space;t_A" />と単語<img src="https://latex.codecogs.com/gif.latex?\inline&space;t_B" />が同一文に出現する回数（共起回数）を<img src="https://latex.codecogs.com/gif.latex?\inline&space;C(t_A, t_B)" />としたとき、単語<img src="https://latex.codecogs.com/gif.latex?\inline&space;t_A" />と単語<img src="https://latex.codecogs.com/gif.latex?\inline&space;t_B" />の共起度を下記の式で定義する：
 
-$$ log \frac{Pr(t_B | t_A)}{Pr(t_A)} = log \frac{Pr(t_A,t_B)}{Pr(t_A)Pr(t_B)} = log \frac{N \cdot C(t_A,t_B)}{C(t_A) \cdot C(t_B)} $$
+<img src="https://latex.codecogs.com/gif.latex?log&space;\frac{Pr(t_B&space;|&space;t_A)}{Pr(t_A)}&space;=&space;log&space;\frac{Pr(t_A,t_B)}{Pr(t_A)Pr(t_B)}&space;=&space;log&space;\frac{N&space;\cdot&space;C(t_A,t_B)}{C(t_A)&space;\cdot&space;C(t_B)}"/>
 
 [「茶の本」の文書](https://raw.githubusercontent.com/trycycle/data-science-bootcamp/master/data/natural-language-processing/cha_no_merosu.txt)を形態素解析し、共起度が高い名詞のペアを上位20件表示せよ。ただし、共起度の計算対象とする語は、sentence frequencyが3以上の語とせよ。
