@@ -255,6 +255,12 @@ Q38,39で実装した関数simple_search_booksおよびget_abstractを改良し�
 
 ソースコードのコンパイル等の知識に明るいユーザは、精度・実行速度を優先するために[MeCab](http://taku910.github.io/mecab/)の利用をお勧めする。
 
+### janomeのインストール
+ターミナル上で以下のコマンドを実行。
+```sh
+pip install janome
+```
+
 
 ### Q41. 名詞の抽出
 [「茶の本」の文書](https://raw.githubusercontent.com/trycycle/data-science-bootcamp/master/data/natural-language-processing/cha_no_merosu.txt)からすべての名詞を抽出し、その出現頻度とともに表示せよ。
