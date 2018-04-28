@@ -336,8 +336,6 @@ plt.show()
 ### Q50. 共起度の計算
 文書には文が$N$個あるとする。単語$t_A$のsentence_frequencyを$C(t_A)$、単語Bのsentence_frequencyを$C(t_B)$、単語$t_A$と単語$t_B$が同一文に出現する回数（共起回数）を$C(t_A,t_B)$としたとき、単語$t_A$と単語$t_B$の共起度を下記の式で定義する：
 
-```math
 $$ log \frac{Pr(t_B | t_A)}{Pr(t_A)} = log \frac{Pr(t_A,t_B)}{Pr(t_A)Pr(t_B)} = log \frac{N \cdot C(t_A,t_B)}{C(t_A) \cdot C(t_B)} $$
-```
 
 [「茶の本」の文書](https://raw.githubusercontent.com/trycycle/data-science-bootcamp/master/data/natural-language-processing/cha_no_merosu.txt)を形態素解析し、共起度が高い名詞のペアを上位20件表示せよ。ただし、共起度の計算対象とする語は、sentence frequencyが3以上の語とせよ。
