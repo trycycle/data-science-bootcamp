@@ -333,14 +333,14 @@ plt.show()
 
 
 ### Q49. 共起語の取得
-ある文の中に単語<img src="https://latex.codecogs.com/png.latex?\inline&space;t_A" />と単語<img src="https://latex.codecogs.com/png.latex?\inline&space;t_B" />が登場するとき、「<img src="https://latex.codecogs.com/png.latex?\inline&space;t_A" />と<img src="https://latex.codecogs.com/png.latex?\inline&space;t_B" />は共起する」と呼ぶことにする。また、文書中に単語<img src="https://latex.codecogs.com/png.latex?\inline&space;t_A" />と単語<img src="https://latex.codecogs.com/png.latex?\inline&space;t_B" />が登場する文がN個存在するとき、「<img src="https://latex.codecogs.com/png.latex?\inline&space;t_A" />と<img src="https://latex.codecogs.com/png.latex?\inline&space;t_B" />の共起回数はN」と定義する。
+ある文の中に単語<img src="https://latex.codecogs.com/png.latex?\inline&space;t_A" />と単語<img src="https://latex.codecogs.com/png.latex?\inline&space;t_B" />が登場するとき、「<img src="https://latex.codecogs.com/png.latex?\inline&space;t_A" />と<img src="https://latex.codecogs.com/png.latex?\inline&space;t_B" />は共起する」と呼ぶことにする。また、文書中に単語<img src="https://latex.codecogs.com/png.latex?\inline&space;t_A" />と単語<img src="https://latex.codecogs.com/png.latex?\inline&space;t_B" />が登場する文がN個存在するとき、「<img src="https://latex.codecogs.com/png.latex?\inline&space;t_A" />と<img src="https://latex.codecogs.com/png.latex?\inline&space;t_B" />の共起回数をN回」と定義する。
 
 [「茶の本」の文書](https://raw.githubusercontent.com/trycycle/data-science-bootcamp/master/data/natural-language-processing/cha_no_merosu.txt)の文章の中で単語「茶」と共起する名詞を抽出し、共起回数順（降順）に表示せよ。
 
 
 
 ### Q50. 共起度の計算
-文書には文が<img src="https://latex.codecogs.com/png.latex?\inline&space;N" />個あるとする。単語<img src="https://latex.codecogs.com/png.latex?\inline&space;t_A" />のsentence_frequencyを<img src="https://latex.codecogs.com/png.latex?\inline&space;C(t_A)" />、単語Bのsentence_frequencyを<img src="https://latex.codecogs.com/png.latex?\inline&space;C(t_B)" />、単語<img src="https://latex.codecogs.com/png.latex?\inline&space;t_A" />と単語<img src="https://latex.codecogs.com/png.latex?\inline&space;t_B" />が同一文に出現する回数（共起回数）を<img src="https://latex.codecogs.com/png.latex?\inline&space;C(t_A,&space;t_B)" />としたとき、単語<img src="https://latex.codecogs.com/png.latex?\inline&space;t_A" />と単語<img src="https://latex.codecogs.com/png.latex?\inline&space;t_B" />の共起度を下記の式で定義する：
+文書中に文が<img src="https://latex.codecogs.com/png.latex?\inline&space;N" />個あるとする。単語<img src="https://latex.codecogs.com/png.latex?\inline&space;t_A" />のsentence_frequencyを<img src="https://latex.codecogs.com/png.latex?\inline&space;C(t_A)" />、単語Bのsentence_frequencyを<img src="https://latex.codecogs.com/png.latex?\inline&space;C(t_B)" />、単語<img src="https://latex.codecogs.com/png.latex?\inline&space;t_A" />と単語<img src="https://latex.codecogs.com/png.latex?\inline&space;t_B" />が同一文に出現する回数（共起回数）を<img src="https://latex.codecogs.com/png.latex?\inline&space;C(t_A,&space;t_B)" />としたとき、単語<img src="https://latex.codecogs.com/png.latex?\inline&space;t_A" />と単語<img src="https://latex.codecogs.com/png.latex?\inline&space;t_B" />の共起度を下記の式で定義する：
 
 <img src="https://latex.codecogs.com/png.latex?log&space;\frac{Pr(t_B&space;|&space;t_A)}{Pr(t_A)}&space;=&space;log&space;\frac{Pr(t_A,t_B)}{Pr(t_A)Pr(t_B)}&space;=&space;log&space;\frac{N&space;\cdot&space;C(t_A,t_B)}{C(t_A)&space;\cdot&space;C(t_B)}"/>
 
