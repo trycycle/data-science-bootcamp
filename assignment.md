@@ -243,3 +243,99 @@ CiNii Booksのウェブサイト上の任意の書誌詳細ページのURL（例
 
 ### Q40. 図書・雑誌検索API（5/5）
 Q38,39で実装した関数simple_search_booksおよびget_abstractを改良して、任意のキーワードqueryが与えられたときに、それに関する図書・雑誌リストを最大100件取得し、そのタイトル、著者名、書誌詳細ページのURL、および図書・雑誌の概要文を返す関数search_booksを実装せよ。なお、出力は{"title":タイトル, "author":著者名, "detail_url":書誌詳細ページのURL, "abstract":概要文}という辞書のリストで行うものとする。また、キーワードにマッチする図書・雑誌がなかった場合はNoneオブジェクトを返すように実装せよ。
+
+---
+## 第5章: 軽量な自然言語処理
+
+本章では、岡倉天心の「茶の本」を題材に形態素解析器を用いた「軽量な自然言語解析」の演習を行う。下記リンクから「茶の本」のテキストファイルをダウンロードして、以下の課題に解答せよ。
+
+[「茶の本」のテキストファイルをダウンロード](https://raw.githubusercontent.com/trycycle/data-science-bootcamp/master/data/natural-language-processing/cha_no_merosu.txt)
+
+なお、演習に用いる形態素解析器は特に指定はしないが、一般的なWindowsユーザはインストールの簡便性を考慮して[janome](http://mocobeta.github.io/janome/)を利用することをお勧めする。janomeのインストール方法については、以下に記す。
+
+ソースコードのコンパイル等の知識に明るいユーザは、精度・実行速度を優先するために[MeCab](http://taku910.github.io/mecab/)の利用をお勧めする。
+
+
+### Q41. 名詞の抽出
+[「茶の本」の文書](https://raw.githubusercontent.com/trycycle/data-science-bootcamp/master/data/natural-language-processing/cha_no_merosu.txt)からすべての名詞を抽出し、その出現頻度とともに表示せよ。
+
+
+### Q42. サ変接続名詞の抽出
+[「茶の本」の文書](https://raw.githubusercontent.com/trycycle/data-science-bootcamp/master/data/natural-language-processing/cha_no_merosu.txt)からすべてのサ変接続の名詞を抽出し、その出現頻度とともに表示せよ（[言語処理100本ノック 2015 Q.33 改題](http://www.cl.ecei.tohoku.ac.jp/nlp100/)より）。
+
+
+### Q43. 「形容詞+名詞」の句の抽出
+[「茶の本」の文書](https://raw.githubusercontent.com/trycycle/data-science-bootcamp/master/data/natural-language-processing/cha_no_merosu.txt)から「形容詞+名詞」の形になっている句をすべて抽出し、表示せよ。
+
+
+### Q44. 頻出単語の抽出
+[「茶の本」の文書](https://raw.githubusercontent.com/trycycle/data-science-bootcamp/master/data/natural-language-processing/cha_no_merosu.txt)からすべての単語を抽出し、出現頻度が高い上位20件の単語（の原形）を、品詞名、頻度付きで表示せよ。
+
+
+### Q45. 単語出現頻度のヒストグラム
+[「茶の本」の文書](https://raw.githubusercontent.com/trycycle/data-science-bootcamp/master/data/natural-language-processing/cha_no_merosu.txt)のすべての名詞を抽出し、単語の出現頻度のヒストグラムを表示せよ（[言語処理100本ノック 2015 Q.38 改題](http://www.cl.ecei.tohoku.ac.jp/nlp100/)より）。
+
+なお、ヒストグラムの表示にはmatplotlibライブラリを用いるとよい。以下にサンプルコードを記す：
+
+``` sample.py
+import random
+import matplotlib.pyplot as plt
+%matplotlib inline
+
+# 平均0、標準偏差1の正規分布から10000個の数を生成し、dataに格納
+data = [random.gauss(0, 1) for i in range(10000)]
+
+# ヒストグラムを出力
+plt.hist(data, bins=50) # 分割数（ビンの数）を50とする
+plt.show()
+```
+
+### Q46. ジップ（Zipf）の法則
+[「茶の本」の文書](https://raw.githubusercontent.com/trycycle/data-science-bootcamp/master/data/natural-language-processing/cha_no_merosu.txt)の全単語を抽出し、単語の出現頻度順位を横軸、その出現頻度を縦軸する両対数グラフを表示せよ（[言語処理100本ノック 2015 Q.39 改題](http://www.cl.ecei.tohoku.ac.jp/nlp100/)より）。
+
+なお、散布図の表示にはmatplotlibライブラリを用いるとよい。以下にサンプルコードを記す：
+
+``` sample.py
+import math
+import matplotlib.pyplot as plt
+%matplotlib inline
+
+# X = [0, 0.1, 0.2, ..... 9.9]
+X = [0.1 * i for i in range(100)]
+# y = exp(2x+1)
+Y = [math.exp(2 * x + 1) for x in X]
+
+# 散布図を表示
+plt.scatter(X, Y)
+plt.yscale("log")
+plt.show()
+```
+
+
+### Q47. 文の抽出
+[「茶の本」の文書](https://raw.githubusercontent.com/trycycle/data-science-bootcamp/master/data/natural-language-processing/cha_no_merosu.txt)の文章を文に切り分けたものを、リストsentencesに格納せよ。さらに文の総数（リストsentencesの長さ）を求めよ。なお、切り分ける際、文に登場する空白文字、カギ括弧、および改行記号は除去せよ。
+
+
+### Q48. Sentence frequency
+一般に文書は複数の文から構成される。ある単語が出現する文の数をsentence frequencyと呼ぶことにする。
+
+[「茶の本」の文書](https://raw.githubusercontent.com/trycycle/data-science-bootcamp/master/data/natural-language-processing/cha_no_merosu.txt)に出現する全名詞について、そのsentence frequencyを計算し、
+* 単語の原形をキー、
+* sentence frequencyをバリュー
+
+とする辞書形式で結果を表示せよ。
+
+
+### Q49. 共起語の取得
+ある文の中に単語$t_A$と単語$t_B$が登場するとき、「$t_A$と$t_B$は共起する」と呼ぶことにする。また、文書中に単語$t_A$と単語$t_B$が登場する文がN個存在するとき、「$t_A$と$t_B$の共起回数はN」と定義する。
+
+[「茶の本」の文書](https://raw.githubusercontent.com/trycycle/data-science-bootcamp/master/data/natural-language-processing/cha_no_merosu.txt)の文章の中で単語「茶」と共起する名詞を抽出し、共起回数順（降順）に表示せよ。
+
+
+
+### Q50. 共起度の計算
+文書には文が$N$個あるとする。単語$t_A$のsentence_frequencyを$C(t_A)$、単語Bのsentence_frequencyを$C(t_B)$、単語$t_A$と単語$t_B$が同一文に出現する回数（共起回数）を$C(t_A,t_B)$としたとき、単語$t_A$と単語$t_B$の共起度を下記の式で定義する：
+
+$$ log \frac{Pr(t_B | t_A)}{Pr(t_A)} = log \frac{Pr(t_A,t_B)}{Pr(t_A)Pr(t_B)} = log \frac{N \cdot C(t_A,t_B)}{C(t_A) \cdot C(t_B)} $$
+
+[「茶の本」の文書](https://raw.githubusercontent.com/trycycle/data-science-bootcamp/master/data/natural-language-processing/cha_no_merosu.txt)を形態素解析し、共起度が高い名詞のペアを上位20件表示せよ。ただし、共起度の計算対象とする語は、sentence frequencyが3以上の語とせよ。
